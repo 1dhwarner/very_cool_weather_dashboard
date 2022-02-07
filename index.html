@@ -33,29 +33,29 @@
             <div class="card-text">
               Search for a City:
             </div>
-            <form id="form">
-                <input type="search" class="searchCity" name="search-city" 
-            placeholder="Search...">
-            </form>
-            <!-- add button -->
-            <button class="searchBtn">search button</button>
-            
-            <div class="container cities"></div>
+
+            <div class="input-group mb-3">
+              <input type="text" class="form-control textVal" placeholder="Search...">
+              <div class="input-group-append searchBtn">
+                <button class="btn btn-primary search-button" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+
+            <div class="container searchedCities"></div>
 
         </div>
       </section>
 
-<div class="container-display">
-  <section class="col-12 col-md-8 col-lg-9">
-        <div class="jumbotron">
-            <div class="container">
-              <h1 class="display-4">display city name here</h1>
-              <p class="lead">Temp</p>
-              <p class="lead">Wind</p>
-              <p class="lead">Humidity</p>
-              <p class="lead">UV Index</p>
-            </div>
-          </div>
+      <!--ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT-->
+      <div class="card bg-light mb-3 " style="max-width: 400px;">
+        <h2 class="card-header cardTodayCityName"></h2>
+        <h3 class="card-header cardTodayDate"></h3>
+        <img class="icons"/>
+        <div class="card-body cardBodyToday">
+        </div>
+      </div>
+
+      <!--ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT-->
         
           <div class="row">
               <div class="col-sm">
