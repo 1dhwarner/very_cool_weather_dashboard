@@ -35,13 +35,16 @@
             </div>
 
             <div class="input-group mb-3">
-              <input type="text" class="form-control textVal" placeholder="Search...">
+              <input type="text" class="form-control" id="search-input" placeholder="Search...">
               <div class="input-group-append searchBtn">
-                <button class="btn btn-primary search-button" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                <button class="btn btn-primary" type="button" id="button-addon2 city-button"><i class="fas fa-search"></i></button>
               </div>
             </div>
 
-            <div class="container searchedCities"></div>
+            <div class="card" style="width: 18rem;">
+              <ul id="city-list" class="list-group list-group-flush">
+               <!-- searched cities go here -->
+              </ul>
 
         </div>
       </section>
@@ -57,24 +60,8 @@
 
       <!--update -->
         
-          <div class="row">
-              <div class="col-sm">
-                One of three columns
-              </div>
-              <div class="col-sm">
-                One of three columns
-              </div>
-              <div class="col-sm">
-                One of three columns
-              </div>
-              <div class="col-sm">
-                One of three columns
-              </div>
-              <div class="col-sm">
-                One of three columns
-              </div>
-            </div>
-          </div>
+          <div class="row fiveDayForecast"></div>
+
     </div>
   </section>
 
