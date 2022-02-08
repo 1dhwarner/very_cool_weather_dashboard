@@ -19,6 +19,10 @@
     margin-left: 10px;
 }  
 
+.display {
+  text-align: center;
+}
+
 #form {
     float: center;
     padding: 6px;

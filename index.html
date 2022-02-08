@@ -35,8 +35,8 @@
             </div>
 
             <form id ="search">
-              <input type="text" name="search-bar" class="form-control" id="city">
-              <button class="btn btn-primary" type="submit">Search</button>
+              <input type="text" name="search-bar" class="form-control inputValue" id="city-input">
+              <button class="btn btn-primary button" type="submit">Search</button>
           </form>
 
           <ol id="cities"></ol>
@@ -45,13 +45,14 @@
         </div>
       </section>
 
-
-      <div class="card mb-3 " style="max-width: 450px;">
-        <h2 class="card-header cardTodayCityName"></h2>
-        <h3 class="card-header cardTodayDate"></h3>
-        <div class="card-body cardBodyToday">
-        </div>
+      <div class="display">
+        <h1 class="name"></h1>
+        <p class="temp"></p>
+        <p class="wind"></p>
+        <p class="humidity"></p>
+        <p class="uvIndex"></p>
       </div>
+
 
         
       <div class="row fiveDayForecast"></div>
