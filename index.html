@@ -34,33 +34,27 @@
               Search for a City:
             </div>
 
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" id="search-input" placeholder="Search...">
-              <div class="input-group-append searchBtn">
-                <button class="btn btn-primary" type="button" id="button-addon2 city-button"><i class="fas fa-search"></i></button>
-              </div>
-            </div>
+            <form id ="search">
+              <input type="text" name="search-bar" class="form-control" id="city">
+              <button class="btn btn-primary" type="submit">Search</button>
+          </form>
 
-            <div class="card" style="width: 18rem;">
-              <ul id="city-list" class="list-group list-group-flush">
-               <!-- searched cities go here -->
-              </ul>
+          <ol id="cities"></ol>
+
 
         </div>
       </section>
 
-      <!--Update-->
+
       <div class="card mb-3 " style="max-width: 450px;">
         <h2 class="card-header cardTodayCityName"></h2>
         <h3 class="card-header cardTodayDate"></h3>
-        <img class="icons"/>
         <div class="card-body cardBodyToday">
         </div>
       </div>
 
-      <!--update -->
         
-          <div class="row fiveDayForecast"></div>
+      <div class="row fiveDayForecast"></div>
 
     </div>
   </section>

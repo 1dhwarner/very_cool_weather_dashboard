@@ -1,56 +1,26 @@
-// define variables
-var cityList =$("#city-list");
-var searchedCities = [];
-var date = moment().format('dddd, MMMM Do YYYY');
-var dateTime = moment().format('YYYY-MM-DD HH:MM:SS')
+// // define variables
 
-var search = $("#search-city");
-var searchButton = $(".search-button");
-
-// openweather api key 
-var APIKey = "b78502564bdb2b68696e0c9f19ef03ea";
+var search = document.querySelector('#search');
+var city = document.querySelector('#city');
+var cities = document.querySelector('#cities');
 
 
-// functions 
+// save search items to local storage 
 
+search.addEventListener('submit', function (event) {
 
-// save previous searches to local storage and
+	// Don't submit the form
+	event.preventDefault();
 
-init();
+	// Ignore it if the wishlist item is empty
+	if (city.value.length < 1) return;
 
-function init (){
+    cities.innerHTML += '<ul>' + city.value + '<ul>';
 
-    var savedSearches = JSON.parse(localStorage.getItem("searchedCities"));
+	// Clear input
+	city.value = '';
 
-    if (searchedCities === "") {
-        searchedCities = savedSearches;
-    }
+	// Save the list to localStorage
+	localStorage.setItem('city', cities.innerHTML);
 
-    displaySearches();
-
-}
-
-$("#city-button").on("click", function(event) {
-    event.preventDefault();
-
-    var city = $("#search-input").val().trim();
-
-    if (city === "") {
-        return;
-    }
-
-    searchedCities.push(city);
-
-    // saveSearches();
-    // displaySearches();
-
-});
-
-function displaySearches() {
-
-}
-
-function saveSearches() {
-    localStorage.setItem("searchedCities", JSON.stringify(searchedCities));
-    console.log(localStorage);
-};
+}, false);
