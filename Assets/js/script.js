@@ -13,12 +13,12 @@ var uvIndex = document.querySelector('.uvIndex');
 var key = 'b78502564bdb2b68696e0c9f19ef03ea'
 
 button.addEventListener('click', function(){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value.trim()+'&appid=b78502564bdb2b68696e0c9f19ef03ea')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value.trim()+'&units=imperial&appid=b78502564bdb2b68696e0c9f19ef03ea')
     .then(response => response.json())
     .then(data => {
-        var nameValue = data['nameInput'];
+        var nameValue = data['name'];
         var tempValue = data['main']['temp'];
-        var windValue = data['wind'] 
+        var windValue = data['wind']; 
         var humidityValue = data['main']['humidity'];
         // var uvIndexValue = data ['main']['']
 
@@ -29,7 +29,7 @@ button.addEventListener('click', function(){
     })
 
 .catch(err => alert('Wrong city name!'))
-})
+});
 
 // current date / time  
 var date = moment().format('dddd, MMMM Do YYYY');
